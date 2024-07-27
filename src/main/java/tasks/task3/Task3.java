@@ -26,6 +26,7 @@ public class Task3 {
         int rollsTotal = scanner.nextInt();
         System.out.println("Enter the total number of games to be tested:");
         int testsTotal = scanner.nextInt();
+        scanner.close();
 
         GameProbabilityCalculator gameProbabilityCalculator = new GameProbabilityCalculator(sequence1, sequence2, rollsTotal);
         GameProbabilityResult probabilities = gameProbabilityCalculator.calculateApproximate(testsTotal);

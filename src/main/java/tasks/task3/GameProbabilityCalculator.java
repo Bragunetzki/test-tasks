@@ -29,6 +29,9 @@ public class GameProbabilityCalculator {
      */
     public GameProbabilityResult calculateApproximate(int totalTests) {
         int player1Victories = 0, player2Victories = 0, draws = 0;
+        if (totalTests <= 0) {
+            return new GameProbabilityResult(0, 0, 1);
+        }
 
         for (int i = 0; i < totalTests; i++) {
             GameResult result = gameEmulator.runGame(rollsTotal);
