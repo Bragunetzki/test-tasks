@@ -14,9 +14,9 @@ public class Task1 {
 
         System.out.println("Unsorted: " + Arrays.toString(array));
 
-        Integer[] arrayIntegers = Arrays.stream(array).boxed().toArray(Integer[]::new);
-        Arrays.sort(arrayIntegers, new CustomComparator());
+        Integer[] sortedArray = Arrays.stream(array).boxed().toArray(Integer[]::new);
+        Arrays.sort(sortedArray, new CustomComparator());
 
-        System.out.println("Sorted:   " + Arrays.toString(arrayIntegers));
+        System.out.println("Sorted:   " + Arrays.toString(sortedArray));
     }
 }

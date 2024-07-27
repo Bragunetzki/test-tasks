@@ -21,16 +21,17 @@ public class Task2 {
      * @return a {@link List} of Integers containing the most common value or values within the array. If the array is empty, returns an empty list.
      */
     public static List<Integer> findMostCommonNumbers(int[] array) {
-        List<Integer> mostCommonNumbers = new ArrayList<>();
         if (array.length <= 0) {
-            return mostCommonNumbers;
+            return new ArrayList<>();
         }
 
         Map<Integer, Integer> frequencyMap = new HashMap<>();
         for (int i : array) {
             frequencyMap.merge(i, 1, Integer::sum);
         }
+
         int maxFreq = Collections.max(frequencyMap.values());
+        List<Integer> mostCommonNumbers = new ArrayList<>();
 
         for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
             if (entry.getValue() == maxFreq) {
