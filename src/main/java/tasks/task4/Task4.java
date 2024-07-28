@@ -27,7 +27,8 @@ public class Task4 {
         else {
             System.out.println("Данные после разделения: ");
             for (int i = 0; i < k; i++) {
-                System.out.println(partitions.get(i) + ", " + sumList(partitions.get(i)));
+                int sum = partitions.get(i).stream().reduce(0, Integer::sum);
+                System.out.println(partitions.get(i) + ", " + sum);
             }
         }
     }
@@ -102,19 +103,5 @@ public class Task4 {
         }
 
         return false;
-    }
-
-    /**
-     * Utility method for summing all elements in an Integer list.
-     *
-     * @param list list where the summed values are taken from.
-     * @return a sum of elements within the list.
-     */
-    private static int sumList(List<Integer> list) {
-        int sum = 0;
-        for (int num : list) {
-            sum += num;
-        }
-        return sum;
     }
 }
