@@ -4,8 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- * Class for running an example of task 1. Generates an array with random integers
- * and sorts it using a custom comparator.
+ * Class for running an example of task 1. Generates an array with random integers and sorts it using a custom comparator.
  */
 public class Task1 {
     public static void main(String[] args) {
